@@ -1,0 +1,14 @@
+# data and generated files
+*.tif
+*.tiff
+wrong_way_cache/
+leaderboards.csv
+highlights.csv
+wrong_way_paths.kml
+
+# python
+__pycache__/
+*.egg-info/
+.venv/
+build/
+dist/

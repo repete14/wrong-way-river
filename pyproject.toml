@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wrong-way-river"
+dynamic = ["version"]
+description = "Find the places where a raindrop travels furthest in the wrong direction, using HydroSHEDS flow-direction data."
+readme = "README.md"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.23",
+    "numba>=0.58",
+    "scipy>=1.6",
+    "rasterio>=1.3",
+    "pandas>=1.5",
+]
+
+[project.scripts]
+wrong-way-river = "wrong_way_river:main"
+
+[tool.setuptools]
+py-modules = ["wrong_way_river"]
+
+[tool.setuptools.dynamic]
+version = {attr = "wrong_way_river.__version__"}
